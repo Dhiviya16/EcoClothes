@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginTop="5dp"
+    app:cardMaxElevation="10dp"
+    app:cardBackgroundColor="#E6E6E6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ShowDonateName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="UserName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="18dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date :"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="18dp"/>
+            <TextView
+                android:id="@+id/ShowDonateDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show Date"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="18dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Donation Status :"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="18dp"/>
+            <TextView
+                android:id="@+id/ShowDonateStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Show Status"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed"
+                android:textSize="18dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

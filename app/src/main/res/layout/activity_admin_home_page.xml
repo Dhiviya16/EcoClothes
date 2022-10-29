@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminHomePageActivity">
+
+    <RelativeLayout
+        android:id="@+id/Rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/logout"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/white"
+            android:src="@drawable/logout"
+            app:civ_border_color="@color/transparent"
+            app:civ_border_width="2dp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="WELCOME"
+                android:textColor="@color/teal_700"
+                android:textSize="23dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed"
+                android:text="admin@gmail.com"
+                android:textColor="@color/black"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Rl1"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Recycle Updates"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/adminH_btnViewAll"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="10dp"
+                android:text="View All Request"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:drawableEnd="@drawable/all"
+                android:paddingEnd="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/box"/>
+
+            <Button
+                android:id="@+id/adminH_btnPending"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Pending Request"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"
+                android:drawableEnd="@drawable/deadline"
+                android:paddingEnd="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/box"/>
+
+            <Button
+                android:id="@+id/adminH_btnFetch"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Request To Fetched"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"
+                android:drawableEnd="@drawable/pickup"
+                android:paddingEnd="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/box"/>
+
+            <Button
+                android:id="@+id/adminH_btnCompleted"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Completed Request"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"
+                android:drawableEnd="@drawable/completed"
+                android:paddingEnd="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/box"/>
+
+            <Button
+                android:id="@+id/adminH_btnRejected"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Rejected Request"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"
+                android:drawableEnd="@drawable/reject"
+                android:paddingEnd="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/box"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                android:text="Donation Updates"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/adminH_btnViewAllDonation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="View All Donations"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/box"/>
+
+            <Button
+                android:id="@+id/adminH_btnPaidDonation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="Paid Donations"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/box"/>
+
+            <Button
+                android:id="@+id/adminH_btnUnPaidDonation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:text="UnPaid Donations"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textStyle="bold"
+                android:textSize="18dp"
+                android:layout_marginTop="15dp"
+                android:paddingEnd="20dp"
+                android:textColor="@color/white"
+                android:background="@drawable/box"
+                android:layout_marginBottom="30dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

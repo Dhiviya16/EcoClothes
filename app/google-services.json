@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "533807123138",
+    "project_id": "ecoclothes-db8fa",
+    "storage_bucket": "ecoclothes-db8fa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:533807123138:android:d403351ccc8305247dc95b",
+        "android_client_info": {
+          "package_name": "com.example.clothingrecycler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "533807123138-5kj688osclgthlu9u6a1jddoltmed8r6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6Mbah6BIKkVRU4nxLsMTXgtNgdCYCSTE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "533807123138-5kj688osclgthlu9u6a1jddoltmed8r6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

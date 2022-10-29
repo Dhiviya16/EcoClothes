@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminUpdateRequestActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/UpdateRequestPageToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/teal_700"
+            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            app:title="Update Request Page"
+            app:titleTextColor="@color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:textSize="17dp"/>
+
+            <EditText
+                android:id="@+id/update_etName"
+                android:enabled="false"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_box"
+                android:layout_marginTop="8dp"
+                android:elevation="10dp"
+                android:hint="Name"
+                android:paddingStart="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:textSize="17dp"
+                android:layout_marginTop="7dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/update_etAddress"
+                    android:enabled="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="85dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/border_box"
+                    android:layout_marginTop="8dp"
+                    android:elevation="10dp"
+                    android:hint="Address"
+                    android:layout_toLeftOf="@id/mapBtn"
+                    android:layout_alignParentStart="true"
+                    android:inputType="textMultiLine"
+                    android:paddingStart="8dp"/>
+
+                <Button
+                    android:id="@+id/mapBtn"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/map"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Number"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:textSize="17dp"
+                android:layout_marginTop="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/update_etContactNumber"
+                    android:layout_width="250dp"
+                    android:enabled="false"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/border_box"
+                    android:elevation="10dp"
+                    android:hint="Contact Number"
+                    android:inputType="number"
+                    android:paddingStart="8dp" />
+
+                <Button
+                    android:id="@+id/whatsappBtn"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:background="@drawable/whatsapp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:textSize="17dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/update_etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_box"
+                android:layout_marginTop="8dp"
+                android:elevation="10dp"
+                android:hint="Email"
+                android:enabled="false"
+                android:paddingStart="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Quantity"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:textSize="17dp"/>
+
+            <EditText
+                android:id="@+id/update_etQuantity"
+                android:layout_width="match_parent"
+                android:enabled="false"
+                android:layout_height="45dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_box"
+                android:layout_marginTop="8dp"
+                android:elevation="10dp"
+                android:hint="Quantity"
+                android:paddingStart="8dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:textSize="17dp"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/update_etDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/border_box"
+                    android:layout_marginTop="8dp"
+                    android:elevation="10dp"
+                    android:hint="Date"
+                    android:inputType="date"
+                    android:enabled="false"
+                    android:paddingStart="8dp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:textSize="17dp"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/update_etTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/border_box"
+                    android:layout_marginTop="8dp"
+                    android:elevation="10dp"
+                    android:hint="Time"
+                    android:inputType="time"
+                    android:enabled="false"
+                    android:paddingStart="8dp"/>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Image of The Quantity"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:textSize="17dp"
+                android:layout_marginTop="10dp"/>
+
+
+            <ImageView
+                android:layout_marginTop="10dp"
+                android:id="@+id/update_ImageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/upload_image"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/admin_update_column"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:textSize="17dp"
+                android:layout_marginTop="15dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:textSize="17dp"
+                android:layout_marginTop="15dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/update_etStatus"
+                    android:layout_width="250dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/border_box"
+                    android:layout_marginTop="8dp"
+                    android:elevation="10dp"
+                    android:hint="Status"
+                    android:enabled="false"
+                    android:paddingStart="8dp"/>
+
+                <ImageView
+                    android:id="@+id/update_ConfirmType"
+                    android:layout_width="39dp"
+                    android:layout_height="39dp"
+                    android:src="@drawable/check"
+                    android:layout_gravity="center_vertical"
+                    android:elevation="10dp"
+                    android:layout_marginStart="15dp"/>
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:id="@+id/rbFetch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="To Fetch"
+                    android:layout_marginEnd="5dp"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textSize="16dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbCompleted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Completed"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textSize="16dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbRejected"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rejected"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:textSize="16dp"/>
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Remark"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:textSize="17dp"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:id="@+id/update_etRemark"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/border_box"
+                android:layout_marginTop="8dp"
+                android:elevation="10dp"
+                android:hint="Remark"
+                android:paddingStart="8dp"/>
+
+            <Button
+                android:id="@+id/update_BtnUpdate"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:text="Update"
+                android:textColor="@color/white"
+                android:background="@drawable/box"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:textSize="17dp"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
