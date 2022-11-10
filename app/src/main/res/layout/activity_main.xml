@@ -79,7 +79,7 @@
             android:id="@+id/login__BtnForgotPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ForgotPassword? "
+            android:text="Forgot Password? "
             android:background="@color/transparent"
             android:fontFamily="sans-serif-condensed-medium"
             android:textColor="@color/teal_700"
@@ -118,7 +118,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Create Account Here..."
+            android:text="Don't have an account?"
             android:textColor="@color/black"
             android:textSize="16sp"
             android:fontFamily="sans-serif-condensed"/>
@@ -127,7 +127,7 @@
             android:id="@+id/login__BtnRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Register"
+            android:text=" Create An Account"
             android:textColor="@color/teal_700"
             android:textSize="22sp"
             android:fontFamily="sans-serif-condensed"

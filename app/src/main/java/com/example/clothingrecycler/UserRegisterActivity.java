@@ -73,16 +73,19 @@ public class UserRegisterActivity extends AppCompatActivity {
         String confirmPassword = txtConfirmPassword.getText().toString().trim();
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            Toast.makeText(this, "Invalid Email Pattern...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Invalid Email Pattern", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(password)){
-            Toast.makeText(this, "Enter Your Password...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter your password", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(confirmPassword)){
-            Toast.makeText(this, "Confirm Password Empty...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please confirm your password", Toast.LENGTH_SHORT).show();
         }
         else if (!password.equals(confirmPassword)){
-            Toast.makeText(this, "Password Doesn't Match...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Password doesn't match", Toast.LENGTH_SHORT).show();
+        }
+        else if (password.length() < 8) {
+            Toast.makeText(this, "Password should be a minimum of 8 characters", Toast.LENGTH_SHORT).show();
         }
         else {
             createUserAccount();

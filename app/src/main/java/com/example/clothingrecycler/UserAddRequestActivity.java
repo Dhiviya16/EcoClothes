@@ -56,6 +56,8 @@ public class UserAddRequestActivity extends AppCompatActivity {
     int i=0;
     FirebaseAuth auth ;
     Uri image_uri = null ;
+
+    //image pick constants
     private static final  int GALLERY_IMAGE_CODE = 100 ;
     private static final  int CAMERA_IMAGE_CODE = 200 ;
 
@@ -175,25 +177,25 @@ public class UserAddRequestActivity extends AppCompatActivity {
                 String ApUi = user.getUid();
 
                 if (TextUtils.isEmpty(ApName)){
-                    txtName.setError("Please Enter Your Name");
+                    txtName.setError("Please enter your name");
                 }
                 else if (TextUtils.isEmpty(ApContactNumber)){
-                    txtContactNumber.setError("Please Enter Your Phone Number");
+                    txtContactNumber.setError("Please enter your contact number");
                 }
                 else if (ApContactNumber.length()<10){
-                    txtContactNumber.setError("Please Enter Your Phone Number Properly");
+                    txtContactNumber.setError("Please enter a valid phone number");
                 }
                 else if (TextUtils.isEmpty(ApAddress)){
-                    txtAddress.setError("Please Enter Your Address");
+                    txtAddress.setError("Please enter your address");
                 }
                 else if (TextUtils.isEmpty(ApQuantity)){
-                    txtQuantity.setError("Please Enter Clothes Quantity");
+                    txtQuantity.setError("Please enter the quantity of clothes");
                 }
                 else if (TextUtils.isEmpty(ApTime)){
-                    txtTime.setError("Please Select A time");
+                    txtTime.setError("Please select a pick-up time");
                 }
                 else if (TextUtils.isEmpty(ApDate)){
-                    txtDate.setError("Please Select A date");
+                    txtDate.setError("Please select a pick-up date");
                 }
                 else {
                     uploadData(ApName,ApContactNumber,ApAddress,ApEmail,ApQuantity,ApTime,
@@ -330,6 +332,7 @@ public class UserAddRequestActivity extends AppCompatActivity {
 
     private void imagePickDialog() {
 
+        //options(camera, gallery)
         String[] options = {"Camera" , "Gallery"};
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Choose image from");
@@ -352,6 +355,7 @@ public class UserAddRequestActivity extends AppCompatActivity {
     }
 
     private void cameraPick() {
+        //intent to pick image from camera
         ContentValues contentValues = new ContentValues();
         contentValues.put(MediaStore.Images.Media.TITLE , "Temp Pick");
         contentValues.put(MediaStore.Images.Media.TITLE , "Temp desc");
@@ -362,6 +366,7 @@ public class UserAddRequestActivity extends AppCompatActivity {
     }
 
     private void galleryPick() {
+        //intent to pick image from gallery
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
         startActivityForResult(intent , GALLERY_IMAGE_CODE);

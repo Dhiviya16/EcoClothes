@@ -66,23 +66,23 @@ public class MainActivity extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                validateDate();
+                validateData();
             }
         });
 
     }
 
     private String email = "",password = "";
-    private void validateDate() {
+    private void validateData() {
 
         email = txtEmail.getText().toString().trim();
         password = txtPassword.getText().toString().trim();
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            Toast.makeText(this, "Invalid Email Pattern...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Invalid Email Pattern", Toast.LENGTH_SHORT).show();
         }
         else if (TextUtils.isEmpty(password)){
-            Toast.makeText(this, "Enter Your Password...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter your password", Toast.LENGTH_SHORT).show();
         }
         else {
             loginUser();
@@ -91,10 +91,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void loginUser() {
 
-        String AdUsername = "admin@gmail.com";
-        String AdPassword = "admin123";
+        String AdUsername = getString(R.string.admin_email);
+        String AdPassword = getString(R.string.admin_password);
 
-        progressDialog.setMessage("Logging In...");
+        progressDialog.setMessage("Logging In");
         progressDialog.show();
 
         if (txtEmail.getText().toString().equals(AdUsername)) {
@@ -104,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
 
             } else {
+                progressDialog.dismiss();
                 Toast.makeText(MainActivity.this, "Invalid Username/Password", Toast.LENGTH_SHORT).show();
 
             }
@@ -131,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkUser() {
 
-        progressDialog.setMessage("Checking User...");
+        progressDialog.setMessage("Checking User");
 
         FirebaseUser firebaseUser = mAuth.getCurrentUser();
 

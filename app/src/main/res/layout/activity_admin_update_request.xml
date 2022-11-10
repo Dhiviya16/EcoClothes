@@ -19,7 +19,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/teal_700"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-            app:title="Update Request Page"
+            app:title="Update Request"
             app:titleTextColor="@color/white"/>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -168,7 +168,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Quantity"
+                android:text="Quantity of textiles"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
@@ -185,13 +185,13 @@
                 android:background="@drawable/border_box"
                 android:layout_marginTop="8dp"
                 android:elevation="10dp"
-                android:hint="Quantity"
+                android:hint="Quantity of textiles"
                 android:paddingStart="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date"
+                android:text="Pick-up Date"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
@@ -212,7 +212,7 @@
                     android:background="@drawable/border_box"
                     android:layout_marginTop="8dp"
                     android:elevation="10dp"
-                    android:hint="Date"
+                    android:hint="Pick-up Date"
                     android:inputType="date"
                     android:enabled="false"
                     android:paddingStart="8dp"/>
@@ -222,7 +222,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Time"
+                android:text="Pick-up Time"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
@@ -243,7 +243,7 @@
                     android:background="@drawable/border_box"
                     android:layout_marginTop="8dp"
                     android:elevation="10dp"
-                    android:hint="Time"
+                    android:hint="Pick-up Time"
                     android:inputType="time"
                     android:enabled="false"
                     android:paddingStart="8dp"/>
@@ -254,7 +254,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Image of The Quantity"
+                android:text="Textile Image"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
@@ -275,6 +275,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/admin_update_column"
                 android:textColor="@color/black"
+                android:textAlignment="center"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
                 android:textSize="17dp"

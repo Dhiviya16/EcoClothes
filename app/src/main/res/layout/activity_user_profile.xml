@@ -18,7 +18,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/teal_700"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-            app:title="User Profile Page"
+            app:title="Profile"
             app:titleTextColor="@color/white"/>
 
     </com.google.android.material.appbar.AppBarLayout>

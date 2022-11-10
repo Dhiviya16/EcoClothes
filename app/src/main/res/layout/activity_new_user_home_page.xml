@@ -88,7 +88,7 @@
                     android:background="@drawable/box"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:padding="10dp"
-                    android:text="  Recycle Clothing  "
+                    android:text="  Textile Recycling  "
                     android:textColor="@color/white"
                     android:textSize="17dp" />
 

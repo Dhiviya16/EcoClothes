@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">ClothingRecycler</string>
-    <string name="admin_update_column"><u>Admin Update Column</u></string>
+    <string name="app_name">EcoClothes</string>
+    <string name="admin_update_column"><u>Admin Update Form</u></string>
 </resources>

@@ -19,7 +19,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/teal_700"
             app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
-            app:title="Admin Update Donate Page"
+            app:title="Donation Update"
             app:titleTextColor="@color/white"/>
 
     </com.google.android.material.appbar.AppBarLayout>
@@ -168,7 +168,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Quantity"
+                android:text="Quantity of clothes"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
@@ -184,14 +184,14 @@
                 android:background="@drawable/border_box"
                 android:layout_marginTop="8dp"
                 android:elevation="10dp"
-                android:hint="Quantity"
+                android:hint="Quantity of clothes"
                 android:enabled="false"
                 android:paddingStart="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Date"
+                android:text="Pick-up Date"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
@@ -212,7 +212,7 @@
                     android:background="@drawable/border_box"
                     android:layout_marginTop="8dp"
                     android:elevation="10dp"
-                    android:hint="Date"
+                    android:hint="Pick-up Date"
                     android:inputType="date"
                     android:enabled="false"
                     android:paddingStart="8dp"/>
@@ -222,7 +222,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Time"
+                android:text="Pick-up Time"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
@@ -243,7 +243,7 @@
                     android:background="@drawable/border_box"
                     android:layout_marginTop="8dp"
                     android:elevation="10dp"
-                    android:hint="Time"
+                    android:hint="Pick-up Time"
                     android:inputType="time"
                     android:enabled="false"
                     android:paddingStart="8dp"/>
@@ -253,7 +253,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Select A Charity"
+                android:text="Charity"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
@@ -302,6 +302,17 @@
                     android:paddingStart="8dp"/>
 
             </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/admin_update_column"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:layout_marginStart="12dp"
+                android:textSize="17dp"
+                android:layout_marginTop="10dp"/>
 
             <TextView
                 android:layout_width="match_parent"
@@ -444,7 +455,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fee"
+                android:text="Total Payment"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
@@ -460,14 +471,14 @@
                 android:background="@drawable/border_box"
                 android:layout_marginTop="8dp"
                 android:elevation="10dp"
-                android:hint="Fee"
+                android:hint="Total Payment"
                 android:inputType="number"
                 android:paddingStart="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fee Status"
+                android:text="Payment Status"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
@@ -488,7 +499,7 @@
                     android:background="@drawable/border_box"
                     android:layout_marginTop="8dp"
                     android:elevation="10dp"
-                    android:hint="Fee Status"
+                    android:hint="Payment Status"
                     android:enabled="false"
                     android:paddingStart="8dp"/>
 
@@ -514,7 +525,7 @@
                     android:id="@+id/rbUnPaid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="UnPaid"
+                    android:text="Unpaid"
                     android:layout_marginEnd="5dp"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:textSize="16dp"/>
@@ -548,14 +559,14 @@
                 android:background="@drawable/border_box"
                 android:layout_marginTop="8dp"
                 android:elevation="10dp"
-                android:hint="Total Clothes"
+                android:hint="Total Clothes to be Donated"
                 android:inputType="number"
                 android:paddingStart="8dp"/>
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Rejected Clothes"
+                android:text="Total Rejected Clothes"
                 android:textColor="@color/black"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:layout_marginStart="12dp"
@@ -571,7 +582,7 @@
                 android:background="@drawable/border_box"
                 android:layout_marginTop="8dp"
                 android:elevation="10dp"
-                android:hint="Total"
+                android:hint="Total Rejected Clothes"
                 android:inputType="number"
                 android:paddingStart="8dp"/>
 

@@ -84,7 +84,7 @@ public class AdminUpdateDonationsActivity extends AppCompatActivity {
         map = findViewById(R.id.mapBtn);
 
         progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Please Wait..");
+        progressDialog.setTitle("Please Wait");
         progressDialog.setCanceledOnTouchOutside(false);
 
         String postFID = getIntent().getExtras().getString("DoTimestamp");
@@ -238,7 +238,7 @@ public class AdminUpdateDonationsActivity extends AppCompatActivity {
                     txtStatus.setText(reject);
                 }
                 else if (!rbComplete.isChecked() && !rbFetch.isChecked() && !rbRejected.isChecked()){
-                    txtStatus.setError("Please Select One");
+                    txtStatus.setError("Please select the current status");
                     txtStatus.requestFocus();
                 }
             }
@@ -257,7 +257,7 @@ public class AdminUpdateDonationsActivity extends AppCompatActivity {
                     txtFeeStatus.setText(fetched);
                 }
                 else if (!rbPaid.isChecked() && !rbUnPaid.isChecked()){
-                    txtFeeStatus.setError("Please Select One");
+                    txtFeeStatus.setError("Please select the payment status");
                     txtFeeStatus.requestFocus();
                 }
             }
@@ -318,9 +318,9 @@ public class AdminUpdateDonationsActivity extends AppCompatActivity {
         DeStatus = txtStatus.getText().toString().trim();
 
         if (TextUtils.isEmpty(DeStatus)){
-            Toast.makeText(this, "Select Status...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select the current status", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(DeFee)){
-            Toast.makeText(this, "Enter Fee...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter the payment", Toast.LENGTH_SHORT).show();
         }
         else {
             uploadData();
@@ -330,7 +330,7 @@ public class AdminUpdateDonationsActivity extends AppCompatActivity {
 
     private void uploadData() {
 
-        progressDialog.setMessage("Saving Donation Details...");
+        progressDialog.setMessage("Saving Donation Details");
         progressDialog.show();
 
 
@@ -366,7 +366,7 @@ public class AdminUpdateDonationsActivity extends AppCompatActivity {
                     public void onSuccess(Void unused) {
 
                         progressDialog.dismiss();
-                        Toast.makeText(AdminUpdateDonationsActivity.this, "Data Updated...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AdminUpdateDonationsActivity.this, "Data Updated", Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(AdminUpdateDonationsActivity.this,AdminHomePageActivity.class));
                         finish();
                     }

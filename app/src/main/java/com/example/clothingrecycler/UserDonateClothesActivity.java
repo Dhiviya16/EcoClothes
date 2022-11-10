@@ -164,7 +164,7 @@ public class UserDonateClothesActivity extends AppCompatActivity {
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String yes = "Laundry Service";
+                String yes = "Yes, I would to get laundry service";
                 String no = "No";
 
                 if (rb1.isChecked()){
@@ -222,23 +222,23 @@ public class UserDonateClothesActivity extends AppCompatActivity {
         Uid = user.getUid();
 
         if (TextUtils.isEmpty(Name)){
-            Toast.makeText(this, "Enter Your Name...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter your name", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(Address)){
-            Toast.makeText(this, "Enter Your Address...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter your address", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(Quantity)){
-            Toast.makeText(this, "Enter Quantity...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter the quantity", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(ContactNumber)){
-            Toast.makeText(this, "Enter Your Contact Number...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please enter your contact number", Toast.LENGTH_SHORT).show();
         }else if (ContactNumber.length()<10){
-            txtContactNumber.setError("Please Enter Your Phone Number Properly");
+            txtContactNumber.setError("Please enter valid phone number");
         }else if (TextUtils.isEmpty(Date)){
-            Toast.makeText(this, "Select Date...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select the date", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(Time)){
-            Toast.makeText(this, "Select Time...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select the time", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(Charity)){
-            Toast.makeText(this, "Select A Charity...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select a charity...", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(Services)){
-            Toast.makeText(this, "Select The Laundry Service...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select the laundry service", Toast.LENGTH_SHORT).show();
         }
         else {
             addDataDonation();

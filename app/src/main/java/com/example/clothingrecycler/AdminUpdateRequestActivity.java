@@ -206,7 +206,7 @@ public class AdminUpdateRequestActivity extends AppCompatActivity {
                     txtStatus.setText(reject);
                 }
                 else if (!completed.isChecked() && !fetch.isChecked() && !rejected.isChecked()){
-                    txtStatus.setError("Please Select One");
+                    txtStatus.setError("Please select the current status");
                     txtStatus.requestFocus();
                 }
             }
@@ -234,10 +234,10 @@ public class AdminUpdateRequestActivity extends AppCompatActivity {
                 String ApImage = DImage;
 
                 if (TextUtils.isEmpty(ApStatus)){
-                    txtStatus.setError("Please Select Status");
+                    txtStatus.setError("Please select the current status");
                 }
                 else if (TextUtils.isEmpty(ApRemark)){
-                    txtRemark.setError("Please Update Remark/Comment");
+                    txtRemark.setError("Please update the Remark/Comment");
                 }
                 else {
                     String ApStatusUid = DUid+ApStatus;
@@ -253,7 +253,7 @@ public class AdminUpdateRequestActivity extends AppCompatActivity {
     private void uploadData(String apName, String apContactNumber, String apAddress, String apEmail, String apQuantity, String apTime, String apDate, String apStatus, String apRemark, String apUid, String apFid, String apImage,
                             String apStatusUid) {
 
-        progressDialog.setMessage("Updating Request Info...");
+        progressDialog.setMessage("Updating Request Info");
         progressDialog.show();
         final String timeStamp = String.valueOf(System.currentTimeMillis());
         String filepath = "Request/"+"request"+timeStamp;

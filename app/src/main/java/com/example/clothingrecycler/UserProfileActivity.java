@@ -76,7 +76,7 @@ public class UserProfileActivity extends AppCompatActivity {
             }
         });
 
-        //permission();
+
         save = findViewById(R.id.profile_BtnSave);
         profileImage = findViewById(R.id.prImg);
         txtName = findViewById(R.id.profile_etName);
@@ -172,13 +172,16 @@ public class UserProfileActivity extends AppCompatActivity {
                 String prof_ID = user.getUid();
 
                 if (TextUtils.isEmpty(prName)){
-                    txtName.setError("Please Enter Your Name");
+                    txtName.setError("Please enter your name");
                 }
                 else if (TextUtils.isEmpty(prContactNumber)){
-                    txtContactNumber.setError("Please Enter Your Contact Number");
+                    txtContactNumber.setError("Please enter your contact number");
+                }
+                else if (prContactNumber.length() < 10){
+                    txtContactNumber.setError("Please enter a valid contact number");
                 }
                 else if (TextUtils.isEmpty(prAddress)){
-                    txtAddress.setError("Please Enter Your Address");
+                    txtAddress.setError("Please enter your address");
                 }
                 else {
                     uploadData(prName,prAddress,prContactNumber,prEmail,prof_ID);
@@ -231,7 +234,7 @@ public class UserProfileActivity extends AppCompatActivity {
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void aVoid) {
-                                                pd.dismiss();;
+                                                pd.dismiss();
                                                 Toast.makeText(UserProfileActivity.this, "Profile has been edited", Toast.LENGTH_SHORT).show();
 
                                             }
@@ -287,12 +290,10 @@ public class UserProfileActivity extends AppCompatActivity {
                 .withListener(new PermissionListener() {
                     @Override
                     public void onPermissionGranted(PermissionGrantedResponse permissionGrantedResponse) {
-
                     }
 
                     @Override
                     public void onPermissionDenied(PermissionDeniedResponse permissionDeniedResponse) {
-
                     }
 
                     @Override
