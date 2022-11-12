@@ -174,7 +174,7 @@ public class UserDonateClothesActivity extends AppCompatActivity {
                     txtService.setText(no);
                 }
                 else if (!rb2.isChecked() && !rb2.isChecked()){
-                    txtService.setError("Please Select One");
+                    txtService.setError("Please select the laundry service and confirm by clicking the tick button");
                     txtService.requestFocus();
                 }
             }
@@ -236,9 +236,9 @@ public class UserDonateClothesActivity extends AppCompatActivity {
         }else if (TextUtils.isEmpty(Time)){
             Toast.makeText(this, "Please select the time", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(Charity)){
-            Toast.makeText(this, "Please select a charity...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select a charity", Toast.LENGTH_SHORT).show();
         }else if (TextUtils.isEmpty(Services)){
-            Toast.makeText(this, "Please select the laundry service", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please select the laundry service and confirm by clicking the tick button", Toast.LENGTH_SHORT).show();
         }
         else {
             addDataDonation();

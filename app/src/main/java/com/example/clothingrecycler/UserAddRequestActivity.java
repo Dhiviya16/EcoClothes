@@ -259,7 +259,8 @@ public class UserAddRequestActivity extends AppCompatActivity {
                                             @Override
                                             public void onSuccess(Void aVoid) {
                                                 progressDialog.dismiss();;
-                                                Toast.makeText(UserAddRequestActivity.this, "New Request has been submitted", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(UserAddRequestActivity.this,
+                                                        "New Request has been submitted", Toast.LENGTH_SHORT).show();
                                                 startActivity(new Intent(UserAddRequestActivity.this, UserHomePageActivity.class));
                                                 finish();
 

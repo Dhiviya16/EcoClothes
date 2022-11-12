@@ -118,7 +118,7 @@ public class UserRegisterActivity extends AppCompatActivity {
 
     private void updateUserInfo() {
 
-        progressDialog.setMessage("Saving user Info...");
+        progressDialog.setMessage("Saving User Info...");
 
         long timestamp = System.currentTimeMillis();
 
@@ -138,7 +138,8 @@ public class UserRegisterActivity extends AppCompatActivity {
                     public void onSuccess(Void unused) {
 
                         progressDialog.dismiss();
-                        Toast.makeText(UserRegisterActivity.this, "Account Created...", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(UserRegisterActivity.this, "Account is successfully created",
+                                Toast.LENGTH_SHORT).show();
                         startActivity(new Intent(UserRegisterActivity.this,NewUserHomePageActivity.class));
                         finish();
                     }

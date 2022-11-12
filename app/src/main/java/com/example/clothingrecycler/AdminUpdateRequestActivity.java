@@ -168,7 +168,8 @@ public class AdminUpdateRequestActivity extends AppCompatActivity {
 
                 String number = txtContactNumber.getText().toString().trim();
 
-                Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse("smsto:" + "" + number + "?body=" + ""));
+                Intent sendIntent = new Intent(Intent.ACTION_SENDTO, Uri.parse
+                        ("smsto:" + "" + number + "?body=" + ""));
                 sendIntent.setPackage("com.whatsapp");
                 startActivity(sendIntent);
 
@@ -298,7 +299,7 @@ public class AdminUpdateRequestActivity extends AppCompatActivity {
                                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                                             @Override
                                             public void onSuccess(Void aVoid) {
-                                                progressDialog.dismiss();;
+                                                progressDialog.dismiss();
                                                 Toast.makeText(AdminUpdateRequestActivity.this, "Request has been Updated", Toast.LENGTH_SHORT).show();
                                                 startActivity(new Intent(AdminUpdateRequestActivity.this, AdminPendingRequestActivity.class));
                                                 finish();

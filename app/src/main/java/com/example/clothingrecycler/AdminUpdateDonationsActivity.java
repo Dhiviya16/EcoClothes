@@ -366,8 +366,10 @@ public class AdminUpdateDonationsActivity extends AppCompatActivity {
                     public void onSuccess(Void unused) {
 
                         progressDialog.dismiss();
-                        Toast.makeText(AdminUpdateDonationsActivity.this, "Data Updated", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(AdminUpdateDonationsActivity.this,AdminHomePageActivity.class));
+                        Toast.makeText(AdminUpdateDonationsActivity.this,
+                                "Data is updated", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(AdminUpdateDonationsActivity.this,
+                                AdminHomePageActivity.class));
                         finish();
                     }
                 }).addOnFailureListener(new OnFailureListener() {

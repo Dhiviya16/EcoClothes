@@ -215,7 +215,8 @@ public class UserViewDonateActivity extends AppCompatActivity {
                 for (DataSnapshot ds: dataSnapshot.getChildren()){
                     DonateModel donateModel = ds.getValue(DonateModel.class);
                     donateModels.add(donateModel);
-                    userDonateAdapter = new UserDonateAdapter(getApplicationContext(), donateModels);
+                    userDonateAdapter = new UserDonateAdapter
+                            (getApplicationContext(), donateModels);
                     recyclerView.setAdapter(userDonateAdapter);
                 }
             }
